@@ -5,7 +5,7 @@ public class TelaDeExibicao {
         Scanner sc = new Scanner(System.in);
 
         Filmes filmes = new Filmes();
-        FilmesAcao filmesAcao = new FilmesAcao();
+        FilmesAcao filmesAcao = new FilmesAcao(); // fazer um vetor de for para criar cada filme; || pegar as info s e passar para um metodo para ele fazer as atribuições por mim
         FilmesRomance filmesRomance = new FilmesRomance();
         FilmesTerror filmesTerror = new FilmesTerror();
 
@@ -147,7 +147,7 @@ public class TelaDeExibicao {
                     }
                     else{
                         System.out.println("loading....");
-                        System.out.println("*retorna para tela inicial*"); // teria que repetir o codigo do inico aqui dentro
+                        System.out.println("*retorna para tela inicial*");
                     }
                 }
             }
@@ -212,7 +212,7 @@ public class TelaDeExibicao {
                     }
                     else{
                         System.out.println("loading....");
-                        System.out.println("*retorna para tela inicial*"); // teria que repetir o codigo do inico aqui dentro
+                        System.out.println("*retorna para tela inicial*"); 
                     }
                 }
             }
@@ -277,7 +277,7 @@ public class TelaDeExibicao {
                     }
                     else{
                         System.out.println("loading....");
-                        System.out.println("*retorna para tela inicial*"); // teria que repetir o codigo do inico aqui dentro
+                        System.out.println("*retorna para tela inicial*");
                     }
                 }
             }
