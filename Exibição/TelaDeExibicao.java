@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TelaDeExibicao {
+public class teste {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -19,488 +19,114 @@ public class TelaDeExibicao {
         System.out.println("Qual a escolha de hoje? =)");
         int escolha1 = sc.nextInt();
 
-        if(escolha1 < 7){ // pra abranger todos os filmes
+        if(escolha1 < 7){
             if(escolha1 == 1){
                 System.out.println();
                 System.out.println("========== INFORMACOES DO FILME: ========== ");
                 System.out.println(aBelaeAFera);
                 System.out.println();
-                System.out.println("| 1- COMPRAR BILHETE | | 2- CANCELAR |");
-                System.out.println();
-                int escolha2 = sc.nextInt();
-                System.out.println();
-
-                if(escolha2 == 1){
-                    System.out.println("QUANTIDADE DE BILHETES?");
-                    int quantB = sc.nextInt();
-
-                    if(quantB > 1){ // se comprar mais de um bilhete
-                        System.out.println("Todos os bilhetes são para uma mesma sessão?");
-                        System.out.println("| 1- SIM | | 2- NAO |");
-                        int booleano = sc.nextInt();
-
-                        if(booleano == 1){ 
-                            filmes.HorariosExb();
-                            int horario = sc.nextInt(); 
-                            System.out.println();
-                            System.out.println("___________BILHETE RESERVADO!____________ ");
-                            System.out.print("BILHETE RESERVADO PARA AS " + horario);
-                            //pagamento e codigo
-                        }
-
-                        else{    
-                            int[] horario = new int[quantB];
-
-                            for(int i = 0; i < quantB; i++){ // escolha de horario para cada bilhete
-                                System.out.println("ESCOLHA O HORARIO DA SESSÃO PARA O " + (i+1) + "° BILHETE:");
-                                filmes.HorariosExb();
-                                horario[i] = sc.nextInt(); 
-                            }
-
-                            System.out.println();
-                            System.out.println("___________" + quantB + " BILHETES RESERVADOS!____________ ");
-
-                            for(int i = 0; i < quantB; i++){
-                                System.out.print("BILHETE "+ (i+1) + " RESERVADO PARA AS ");
-                                if(horario[i] == 1){
-                                    System.out.println("14h45");
-                                }
-                                else if(horario[i] == 2){
-                                    System.out.println("17h05");
-                                }
-                                else{
-                                    System.out.println("20h25");
-                                }
-                            }
-                            //pagamento e codigo
-                        }
-                    }
-                    else{
-                        filmes.HorariosExb();
-                        int horario = sc.nextInt(); 
-                        System.out.println();
-                        System.out.println("___________BILHETE RESERVADO!____________ ");
-                        System.out.print("1 BILHETE RESERVADO PARA AS ");
-                        if(horario == 1){
-                            System.out.println("14h45");
-                        }
-                        else if(horario == 2){
-                            System.out.println("17h05");
-                        }
-                        else{
-                            System.out.println("20h25");
-                        }
-                    }
-                    
-                }
-                else{
-                    funcionamentoInterno.Retornar();
-                }
             }
-            else if(escolha1 == 2){
+            if(escolha1 == 2){
                 System.out.println();
                 System.out.println("========== INFORMACOES DO FILME: ========== ");
                 System.out.println(gatoDeBotas2);
                 System.out.println();
-                System.out.println("| 1- COMPRAR BILHETE | | 2- CANCELAR |");
-                System.out.println();
-                int escolha2 = sc.nextInt();
-                System.out.println();
-
-                if(escolha2 == 1){
-                    System.out.println("QUANTIDADE DE BILHETES?");
-                    int quantB = sc.nextInt();
-
-                    if(quantB > 1){ // se comprar mais de um bilhete
-                        System.out.println("Todos os bilhetes são para uma mesma sessão?");
-                        System.out.println("| 1- SIM | | 2- NAO |");
-                        int booleano = sc.nextInt();
-
-                        if(booleano == 1){ 
-                            filmes.HorariosExb();
-                            int horario = sc.nextInt(); 
-                            System.out.println();
-                            System.out.println("___________BILHETE RESERVADO!____________ ");
-                            System.out.print("BILHETE RESERVADO PARA AS " + horario);
-                            //pagamento e codigo
-                        }
-
-                        else{    
-                            int[] horario = new int[quantB];
-
-                            for(int i = 0; i < quantB; i++){ // escolha de horario para cada bilhete
-                                System.out.println("ESCOLHA O HORARIO DA SESSÃO PARA O " + (i+1) + "° BILHETE:");
-                                filmes.HorariosExb();
-                                horario[i] = sc.nextInt(); 
-                            }
-
-                            System.out.println();
-                            System.out.println("___________" + quantB + " BILHETES RESERVADOS!____________ ");
-
-                            for(int i = 0; i < quantB; i++){
-                                System.out.print("BILHETE "+ (i+1) + " RESERVADO PARA AS ");
-                                if(horario[i] == 1){
-                                    System.out.println("14h45");
-                                }
-                                else if(horario[i] == 2){
-                                    System.out.println("17h05");
-                                }
-                                else{
-                                    System.out.println("20h25");
-                                }
-                            }
-                            //pagamento e codigo
-                        }
-                    }
-                    else{
-                        filmes.HorariosExb();
-                        int horario = sc.nextInt(); 
-                        System.out.println();
-                        System.out.println("___________BILHETE RESERVADO!____________ ");
-                        System.out.print("1 BILHETE RESERVADO PARA AS ");
-                        if(horario == 1){
-                            System.out.println("14h45");
-                        }
-                        else if(horario == 2){
-                            System.out.println("17h05");
-                        }
-                        else{
-                            System.out.println("20h25");
-                        }
-                    }
-                    
-                }
-                else{
-                    funcionamentoInterno.Retornar();
-                }
             }
-            else if(escolha1 == 3){
+            if(escolha1 == 3){
                 System.out.println();
                 System.out.println("========== INFORMACOES DO FILME: ========== ");
                 System.out.println(megan);
                 System.out.println();
-                System.out.println("| 1- COMPRAR BILHETE | | 2- CANCELAR |");
-                System.out.println();
-                int escolha2 = sc.nextInt();
-                System.out.println();
-
-                if(escolha2 == 1){
-                    System.out.println("QUANTIDADE DE BILHETES?");
-                    int quantB = sc.nextInt();
-
-                    if(quantB > 1){ // se comprar mais de um bilhete
-                        System.out.println("Todos os bilhetes são para uma mesma sessão?");
-                        System.out.println("| 1- SIM | | 2- NAO |");
-                        int booleano = sc.nextInt();
-
-                        if(booleano == 1){ 
-                            filmes.HorariosExb();
-                            int horario = sc.nextInt(); 
-                            System.out.println();
-                            System.out.println("___________BILHETE RESERVADO!____________ ");
-                            System.out.print("BILHETE RESERVADO PARA AS " + horario);
-                            //pagamento e codigo
-                        }
-
-                        else{    
-                            int[] horario = new int[quantB];
-
-                            for(int i = 0; i < quantB; i++){ // escolha de horario para cada bilhete
-                                System.out.println("ESCOLHA O HORARIO DA SESSÃO PARA O " + (i+1) + "° BILHETE:");
-                                filmes.HorariosExb();
-                                horario[i] = sc.nextInt(); 
-                            }
-
-                            System.out.println();
-                            System.out.println("___________" + quantB + " BILHETES RESERVADOS!____________ ");
-
-                            for(int i = 0; i < quantB; i++){
-                                System.out.print("BILHETE "+ (i+1) + " RESERVADO PARA AS ");
-                                if(horario[i] == 1){
-                                    System.out.println("14h45");
-                                }
-                                else if(horario[i] == 2){
-                                    System.out.println("17h05");
-                                }
-                                else{
-                                    System.out.println("20h25");
-                                }
-                            }
-                            //pagamento e codigo
-                        }
-                    }
-                    else{
-                        filmes.HorariosExb();
-                        int horario = sc.nextInt(); 
-                        System.out.println();
-                        System.out.println("___________BILHETE RESERVADO!____________ ");
-                        System.out.print("1 BILHETE RESERVADO PARA AS ");
-                        if(horario == 1){
-                            System.out.println("14h45");
-                        }
-                        else if(horario == 2){
-                            System.out.println("17h05");
-                        }
-                        else{
-                            System.out.println("20h25");
-                        }
-                    }
-                    
-                }
-                else{
-                    funcionamentoInterno.Retornar();
-                }
             }
-            else if(escolha1 == 4){
+            if(escolha1 == 4){
                 System.out.println();
                 System.out.println("========== INFORMACOES DO FILME: ========== ");
                 System.out.println(avatar2);
                 System.out.println();
-                System.out.println("| 1- COMPRAR BILHETE | | 2- CANCELAR |");
-                System.out.println();
-                int escolha2 = sc.nextInt();
-                System.out.println();
-
-                if(escolha2 == 1){
-                    System.out.println("QUANTIDADE DE BILHETES?");
-                    int quantB = sc.nextInt();
-
-                    if(quantB > 1){ // se comprar mais de um bilhete
-                        System.out.println("Todos os bilhetes são para uma mesma sessão?");
-                        System.out.println("| 1- SIM | | 2- NAO |");
-                        int booleano = sc.nextInt();
-
-                        if(booleano == 1){ 
-                            filmes.HorariosExb();
-                            int horario = sc.nextInt(); 
-                            System.out.println();
-                            System.out.println("___________BILHETE RESERVADO!____________ ");
-                            System.out.print("BILHETE RESERVADO PARA AS " + horario);
-                            //pagamento e codigo
-                        }
-
-                        else{    
-                            int[] horario = new int[quantB];
-
-                            for(int i = 0; i < quantB; i++){ // escolha de horario para cada bilhete
-                                System.out.println("ESCOLHA O HORARIO DA SESSÃO PARA O " + (i+1) + "° BILHETE:");
-                                filmes.HorariosExb();
-                                horario[i] = sc.nextInt(); 
-                            }
-
-                            System.out.println();
-                            System.out.println("___________" + quantB + " BILHETES RESERVADOS!____________ ");
-
-                            for(int i = 0; i < quantB; i++){
-                                System.out.print("BILHETE "+ (i+1) + " RESERVADO PARA AS ");
-                                if(horario[i] == 1){
-                                    System.out.println("14h45");
-                                }
-                                else if(horario[i] == 2){
-                                    System.out.println("17h05");
-                                }
-                                else{
-                                    System.out.println("20h25");
-                                }
-                            }
-                            //pagamento e codigo
-                        }
-                    }
-                    else{
-                        filmes.HorariosExb();
-                        int horario = sc.nextInt(); 
-                        System.out.println();
-                        System.out.println("___________BILHETE RESERVADO!____________ ");
-                        System.out.print("1 BILHETE RESERVADO PARA AS ");
-                        if(horario == 1){
-                            System.out.println("14h45");
-                        }
-                        else if(horario == 2){
-                            System.out.println("17h05");
-                        }
-                        else{
-                            System.out.println("20h25");
-                        }
-                    }
-                    
-                }
-                else{
-                    funcionamentoInterno.Retornar();
-                }
             }
-            else if(escolha1 == 5){
+            if(escolha1 == 5){
                 System.out.println();
                 System.out.println("========== INFORMACOES DO FILME: ========== ");
                 System.out.println(coringa);
                 System.out.println();
-                System.out.println("| 1- COMPRAR BILHETE | | 2- CANCELAR |");
-                System.out.println();
-                int escolha2 = sc.nextInt();
-                System.out.println();
-
-                if(escolha2 == 1){
-                    System.out.println("QUANTIDADE DE BILHETES?");
-                    int quantB = sc.nextInt();
-
-                    if(quantB > 1){ // se comprar mais de um bilhete
-                        System.out.println("Todos os bilhetes são para uma mesma sessão?");
-                        System.out.println("| 1- SIM | | 2- NAO |");
-                        int booleano = sc.nextInt();
-
-                        if(booleano == 1){ 
-                            filmes.HorariosExb();
-                            int horario = sc.nextInt(); 
-                            System.out.println();
-                            System.out.println("___________BILHETE RESERVADO!____________ ");
-                            System.out.print("BILHETE RESERVADO PARA AS " + horario);
-                            //pagamento e codigo
-                        }
-
-                        else{    
-                            int[] horario = new int[quantB];
-
-                            for(int i = 0; i < quantB; i++){ // escolha de horario para cada bilhete
-                                System.out.println("ESCOLHA O HORARIO DA SESSÃO PARA O " + (i+1) + "° BILHETE:");
-                                filmes.HorariosExb();
-                                horario[i] = sc.nextInt(); 
-                            }
-
-                            System.out.println();
-                            System.out.println("___________" + quantB + " BILHETES RESERVADOS!____________ ");
-
-                            for(int i = 0; i < quantB; i++){
-                                System.out.print("BILHETE "+ (i+1) + " RESERVADO PARA AS ");
-                                if(horario[i] == 1){
-                                    System.out.println("14h45");
-                                }
-                                else if(horario[i] == 2){
-                                    System.out.println("17h05");
-                                }
-                                else{
-                                    System.out.println("20h25");
-                                }
-                            }
-                            //pagamento e codigo
-                        }
-                    }
-                    else{
-                        filmes.HorariosExb();
-                        int horario = sc.nextInt(); 
-                        System.out.println();
-                        System.out.println("___________BILHETE RESERVADO!____________ ");
-                        System.out.print("1 BILHETE RESERVADO PARA AS ");
-                        if(horario == 1){
-                            System.out.println("14h45");
-                        }
-                        else if(horario == 2){
-                            System.out.println("17h05");
-                        }
-                        else{
-                            System.out.println("20h25");
-                        }
-                    }
-                    
-                }
-                else{
-                    funcionamentoInterno.Retornar();
-                }
             }
-            else if(escolha1 == 6){
+            if(escolha1 == 6){
                 System.out.println();
                 System.out.println("========== INFORMACOES DO FILME: ========== ");
                 System.out.println(velozesEFuriosos10);
                 System.out.println();
-                System.out.println("| 1- COMPRAR BILHETE | | 2- CANCELAR |");
-                System.out.println();
-                int escolha2 = sc.nextInt();
-                System.out.println();
+            }
 
-                if(escolha2 == 1){
-                    System.out.println("QUANTIDADE DE BILHETES?");
-                    int quantB = sc.nextInt();
+            System.out.println("| 1- COMPRAR BILHETE | | 2- CANCELAR |");
+            System.out.println();
+            int escolha2 = sc.nextInt();
+            System.out.println();
 
-                    if(quantB > 1){ // se comprar mais de um bilhete
-                        System.out.println("Todos os bilhetes são para uma mesma sessão?");
-                        System.out.println("| 1- SIM | | 2- NAO |");
-                        int booleano = sc.nextInt();
+            if(escolha2 == 1){
+                System.out.println("QUANTIDADE DE BILHETES?");
+                int quantB = sc.nextInt();
 
-                        if(booleano == 1){ 
+                if(quantB > 1){ // se comprar mais de um bilhete
+                    System.out.println("Todos os bilhetes são para uma mesma sessão?");
+                    System.out.println("| 1- SIM | | 2- NAO |");
+                    int booleano = sc.nextInt();
+
+                    if(booleano == 1){ 
+                        filmes.HorariosExb();
+                        int horario = sc.nextInt(); 
+                        System.out.println();
+                        System.out.println("___________BILHETE RESERVADO!____________ ");
+                        System.out.print("BILHETE RESERVADO PARA AS " + horario);
+                        //pagamento e codigo
+                    }
+
+                    else{    
+                        int[] horario = new int[quantB];
+                            
+                        for(int i = 0; i < quantB; i++){ // escolha de horario para cada bilhete
+                            System.out.println("ESCOLHA O HORARIO DA SESSÃO PARA O " + (i+1) + "° BILHETE:");
                             filmes.HorariosExb();
-                            int horario = sc.nextInt(); 
-                            if(horario == 1){
+                            horario[i] = sc.nextInt(); 
+                        }
+
+                        System.out.println();
+                        System.out.println("___________" + quantB + " BILHETES RESERVADOS!____________ ");
+
+                        for(int i = 0; i < quantB; i++){
+                            System.out.print("BILHETE "+ (i+1) + " RESERVADO PARA AS ");
+                            if(horario[i] == 1){
                                 System.out.println("14h45");
                             }
-                            else if(horario == 2){
+                            else if(horario[i] == 2){
                                 System.out.println("17h05");
                             }
                             else{
                                 System.out.println("20h25");
                             }
-                            System.out.println();
-                            System.out.println("___________BILHETES RESERVADOS!____________ ");
-                            System.out.print(quantB + " BILHETES RESERVADOs PARA AS " + horario);
-                            //pagamento e codigo
                         }
-
-                        else{    
-                            int[] horario = new int[quantB];
-
-                            for(int i = 0; i < quantB; i++){ // escolha de horario para cada bilhete
-                                System.out.println("ESCOLHA O HORARIO DA SESSÃO PARA O " + (i+1) + "° BILHETE:");
-                                filmes.HorariosExb();
-                                horario[i] = sc.nextInt(); 
-                            }
-
-                            System.out.println();
-                            System.out.println("___________" + quantB + " BILHETES RESERVADOS!____________ ");
-
-                            for(int i = 0; i < quantB; i++){
-                                System.out.print("BILHETE "+ (i+1) + " RESERVADO PARA AS ");
-                                if(horario[i] == 1){
-                                    System.out.println("14h45");
-                                }
-                                else if(horario[i] == 2){
-                                    System.out.println("17h05");
-                                }
-                                else{
-                                    System.out.println("20h25");
-                                }
-                            }
                             //pagamento e codigo
-                        }
                     }
-                
-                    else{
-                        filmes.HorariosExb();
-                        int horario = sc.nextInt(); 
-                        System.out.println();
-                        System.out.println("___________BILHETE RESERVADO!____________ ");
-                        System.out.print("1 BILHETE RESERVADO PARA AS ");
-                        if(horario == 1){
-                            System.out.println("14h45");
-                        }
-                        else if(horario == 2){
-                            System.out.println("17h05");
-                        }
-                        else{
-                            System.out.println("20h25");
-                        }
-                    }       
                 }
                 else{
-                    funcionamentoInterno.Retornar();
-                }
+                    filmes.HorariosExb();
+                    int horario = sc.nextInt(); 
+                    System.out.println();
+                    System.out.println("___________BILHETE RESERVADO!____________ ");
+                    System.out.print("1 BILHETE RESERVADO PARA AS ");
+                    if(horario == 1){
+                        System.out.println("14h45");
+                    }
+                    else if(horario == 2){
+                        System.out.println("17h05");
+                    }
+                    else{
+                        System.out.println("20h25");
+                    }
+                }            
             }
-        }
-        else{
-            do{
-                System.out.println("Esse não é a numeracao de algum filme. Por favor, selecione um filme de 1 a 6.");
-                System.out.println();
-                escolha1 = sc.nextInt();
-            }while(escolha1 > 6);
-
-            // repetir codigo do primeiro if
-
+            else{
+                funcionamentoInterno.Retornar();
+            }
         }
     }
 }
